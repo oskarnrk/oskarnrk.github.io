@@ -27,19 +27,12 @@ a {
     font-size: larger;
 }
 #footer {
-    padding: 2em 0;
+    padding-top: 10em;
     font-style: italic;
     color: #999;
 }
-@media (min-width: 768px) {
-    #footer {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-}
 @media (max-width: 767px) {
     #description {
-        padding: 1em 0;
+        padding-top: 2em;
     }
 }
