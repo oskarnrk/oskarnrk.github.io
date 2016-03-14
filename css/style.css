@@ -31,13 +31,15 @@ a {
     font-style: italic;
     color: #999;
 }
-@media (min-width: 992px) {
-    #description {
-        padding: 1em 0;
-    }
+@media (min-width: 768px) {
     #footer {
         position: fixed;
         bottom: 0;
         width: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #description {
+        padding: 1em 0;
     }
 }
