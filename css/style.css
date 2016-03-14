@@ -32,6 +32,9 @@ a {
     color: #999;
 }
 @media (min-width: 992px) {
+    #description {
+        padding: 1em 0;
+    }
     #footer {
         position: fixed;
         bottom: 0;
