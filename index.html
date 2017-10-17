@@ -129,7 +129,7 @@
 				<div class="col-md-4">
 					<!-- Description -->
 					<div id="description" class="row">
-						<p>Sono Oscar Zambotti, nickname <i>oskarnrk</i>, ho 34 anni, vivo in Trentino.</p>
+						<p>Sono Oscar Zambotti, nickname <i>oskarnrk</i>, ho <span id="age"></span> anni, vivo in Trentino.</p>
 						<p>Sono - in ordine sparso - sviluppatore web e mobile, marito, padre, appassionato di serie TV e videogiochi, milanista.</p>
 					</div>
 				</div>
@@ -137,7 +137,7 @@
 		</div>
 		<div id="footer" class="row">
 			<div class="container">
-				Copyright © 2016 Oscar Zambotti | Thanks to <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://fortawesome.github.io">Font Awesome</a> and <a href="https://www.google.com/fonts">Google Fonts</a>
+				Copyright © <span id=currYear></span> Oscar Zambotti | Thanks to <a href="http://getbootstrap.com/">Bootstrap</a>, <a href="https://fortawesome.github.io">Font Awesome</a> and <a href="https://www.google.com/fonts">Google Fonts</a>
 				<!-- Inizio Codice ShinyStat -->
 				<script type="text/javascript" src="http://codice.shinystat.com/cgi-bin/getcod.cgi?USER=oskarnrknet"></script>
 				<noscript>
@@ -152,6 +152,20 @@
 		</div>
 	</div>
 	<script>
+		(function() {
+			// Cross Browser compatibilty function
+			// compute and append current year
+			var currYear = new Date().getFullYear();
+			var currYearEl = document.getElementById("currYear");
+			currYearText = document.createTextNode(''+ currYear);
+			currYearEl.appendChild(currYearText);
+			// compute and append age
+			var ageEl = document.getElementById("age");
+			var birthDate = new Date("1983-07-08 00:00:00").getFullYear();
+			var age = document.createTextNode(''+ (currYear - birthDate));
+			ageEl.appendChild(age);
+		})()
+
 		(function(i, s, o, g, r, a, m) {
 			i['GoogleAnalyticsObject'] = r;
 			i[r] = i[r] || function() {
