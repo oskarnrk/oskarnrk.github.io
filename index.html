@@ -155,12 +155,11 @@
 		(function() {
 			// Cross Browser compatibilty function
 			// compute and append current year
-			var now = new Date();
 			var currYearEl = document.getElementById("currYear");
-			var currYearText = document.createTextNode('' + now.getFullYear());
+			var currYearText = document.createTextNode('' + (new Date()).getFullYear());
 			currYearEl.appendChild(currYearText);
 			// compute and append age
-			var diff_ms = now.now() - (new Date(1983, 6, 8)).getTime();
+			var diff_ms = Date.now() - (new Date(1983, 6, 8)).getTime();
     			var age_dt = new Date(diff_ms);
 			var ageEl = document.getElementById("age");
 			var age = document.createTextNode('' + Math.abs(age_dt.getUTCFullYear() - 1970));
