@@ -1,36 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web);
+
 body {
-    position: relative;
     background: #f7f7f7;
     font-family: 'Titillium Web', sans-serif;
 }
+
 a {
     color: #333 !important;
 }
-.page-header {
-    text-align: center;
-}
+
 #social {
-    padding: 1em 0;
-    text-align: center;
     font-size: 4em;
 }
-#links {
-    padding-top: 2em;
-    text-align: center;
-    font-size: 1.2em;
-}
+
 #links a {
     text-decoration: underline;
 }
+
 #description {
     font-size: larger;
 }
-#footer {
-    padding: 10em 0 1em 0;
-    font-style: italic;
-    color: #999;
-}
+
 @media (max-width: 767px) {
     #description {
         padding-top: 2em;
